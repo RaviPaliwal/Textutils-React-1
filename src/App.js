@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import Showcase from "./Components/Showcase";
+import Textarea from "./Components/Textarea";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar head='Text-Utils'/>
+      <Textarea initialtext='Your Text Tools'/>
+      <Showcase linkedinurl="https://www.linkedin.com/in/ravi-paliwal-233312201" Cardname='Ravi Paliwal' Cardtext="I have created such more projects if you want to see then visit my Linkedin Profile"/>
+      <Footer/>
+    </>
   );
 }
 
