@@ -78,10 +78,11 @@ export default function Textarea(props) {
         </button>
         <br className="my-2"></br>
         <button className="btn btn-info " style={{ display: "block" }}>
-          Average Time Read{" "}
+          Average Time Read {" "}
           <span className="badge bg-primary">
-            {0.01 * text.split(" ").length}
+            {0.01 * text.split(" ").length.toFixed(2)}
           </span>
+          {" "}min
         </button>
       </div>
     </>

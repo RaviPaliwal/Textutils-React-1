@@ -74,12 +74,13 @@ export default function Footer() {
 
           {/* <!-- Copyright --> */}
           <div
-            className="text-center p-0"
+            className="text-center p-2"
             style={{ "background-color": "rgba(0, 0, 0, 0.2)" }}
           >
             © 2023 Copyright:
+            <br></br>
             <a
-              className="text-white"
+              className="text-white text-decoration-none"
               href="https://www.linkedin.com/in/ravi-paliwal-233312201"
             >
               https://www.linkedin.com/in/ravi-paliwal-233312201
