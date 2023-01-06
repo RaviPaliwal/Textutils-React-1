@@ -43,6 +43,7 @@ export default function Textarea(props) {
               name=""
               onChange={handleOnChange}
               value={text}
+              style={{backgroundColor:'#F0FFFF'}}
             />
           </div>
         </div>
