@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 export default function Navbar(props) {
+  const handleonChange = ()=>{
+   props.toggleMode(props.mode)
+ }
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-dark bg-dark py-3 "
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3`} 
       >
         <div className="container-fluid">
           <a className="navbar-brand text" href="/">
@@ -40,6 +44,10 @@ export default function Navbar(props) {
             </div>
           </div>
         </div>
+        <div className="form-check form-switch">
+          <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault " onChange={handleonChange}/>
+          <label className= {`form-check-label text-${props.mode==='light'?'dark':'light'} mx-2`} htmlFor="flexSwitchCheckDefault">Darkmode</label>
+</div>
       </nav>
     </div>
   );
