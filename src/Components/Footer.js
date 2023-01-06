@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props) {
   return (
-    <div>
       <>
         {/*<!-- Footer --> */}
-        <footer className="bg-dark text-center text-white">
+        <hr /><hr />
+      <footer className={`bg-${props.mode} text-center text-${props.mode==='light'?'dark':'light'}`}>
           {/* <!-- Grid container --> */}
           <div className="container p-3">
             {/* <!-- Section: Form --> */}
@@ -15,8 +15,8 @@ export default function Footer() {
                 <div className="row d-flex justify-content-center">
                   {/* <!--Grid column--> */}
                   <div className="col-auto">
-                    <p className="pt-0">
-                      <strong>Sign up for our newsletter</strong>
+                    <p className="pt-2">
+                      Sign up for our newsletter
                     </p>
                   </div>
                   {/* <!--Grid column--> */}
@@ -28,11 +28,8 @@ export default function Footer() {
                       <input
                         type="email"
                         id="form5Example21"
-                        className="form-control"
+                        className="form-control mb-3"
                       />
-                      <label className="form-label" for="form5Example21">
-                        Email address
-                      </label>
                     </div>
                   </div>
                   {/* <!--Grid column--> */}
@@ -42,7 +39,7 @@ export default function Footer() {
                     {/* <!-- Submit button --> */}
                     <button
                       type="submit"
-                      className="btn btn-outline-light mb-0"
+                      className={`btn btn-outline-${props.mode==='light'?'success':'info'} mb-0 text-${props.mode==='light'?'dark':'light'}`}
                     >
                       Subscribe
                     </button>
@@ -54,42 +51,29 @@ export default function Footer() {
             </section>
             {/* <!-- Section: Form --> */}
 
-            {/* <!-- Section: Text --> */}
-            <section className="mb-1">
-              <h7>
-                Website Created as My first React Project I have learnt about
-                Props,PropTypes,React project folder Structure,React States{" "}
-              </h7>
-            </section>
-            {/* <!-- Section: Text --> */}
-
             {/* LInks  */}
             <div className="d-flex flex-row justify-content-around">
-              <span><a href="/" className="text-decoration-none">Facebook</a></span>
-              <a href="/" className="text-decoration-none">Github</a>
-              <a href="/" className="text-decoration-none">Whatsapp</a>
+              <span><a href={props.facebook} className="text-decoration-none">Facebook</a></span>
+              <a href={props.github} className="text-decoration-none">Github</a>
+              <a href={props.whatsapp} className="text-decoration-none">Whatsapp</a>
             </div>
           </div>
           {/* <!-- Grid container --> */}
 
-          {/* <!-- Copyright --> */}
           <div
-            className="text-center p-2"
+            className="text-center"
             style={{ "background-color": "rgba(0, 0, 0, 0.2)" }}
           >
-            © 2023 Copyright:
-            <br></br>
+            ©2023 Copyright: <br />
             <a
               className="text-white text-decoration-none"
-              href="https://www.linkedin.com/in/ravi-paliwal-233312201"
+              href={props.linkedin}
             >
-              https://www.linkedin.com/in/ravi-paliwal-233312201
+              {props.linkedin}
             </a>
           </div>
-          {/* <!-- Copyright --> */}
+          
         </footer>
-        {/* <!-- Footer --> */}
       </>
-    </div>
   );
 }

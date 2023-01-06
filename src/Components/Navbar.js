@@ -7,9 +7,9 @@ export default function Navbar(props) {
    props.toggleMode(props.mode)
  }
   return (
-    <div>
+    <div className="mb-4 pb-5">
       <nav
-        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3`} 
+        className={`mb-5 navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3 fixed-top`} 
       >
         <div className="container-fluid">
           <a className="navbar-brand text" href="/">
@@ -41,13 +41,15 @@ export default function Navbar(props) {
               >
                 Linkedin
               </a>
+              
             </div>
-          </div>
-        </div>
-        <div className="form-check form-switch">
+            <div className="pull-right mx-3 form-check form-switch pt-1">
           <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault " onChange={handleonChange}/>
           <label className= {`form-check-label text-${props.mode==='light'?'dark':'light'} mx-2`} htmlFor="flexSwitchCheckDefault">Darkmode</label>
-</div>
+             </div>
+          </div>
+        </div>
+        
       </nav>
     </div>
   );

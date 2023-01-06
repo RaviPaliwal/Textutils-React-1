@@ -26,7 +26,7 @@ function App() {
       <Navbar head='Text-Utils' mode= {mode} toggleMode={toggleMode}/>
       <Textarea initialtext='Your Text Tools'/>
       <Showcase linkedinurl="https://www.linkedin.com/in/ravi-paliwal-233312201" Cardname='Ravi Paliwal' Cardtext="I have created such more projects if you want to see then visit my Linkedin Profile"/>
-      <Footer/>
+      <Footer mode= {mode} linkedin='https://www.linkedin.com/in/ravi-paliwal-233312201'  github='https://github.com/RaviPaliwal' whatsapp='https://wa.me/+919521885078' facebook='https://www.facebook.com/ravi.paliwal.79827' />
     </>
   );
 }
