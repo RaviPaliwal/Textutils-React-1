@@ -12,10 +12,12 @@ export default function Textarea(props) {
   const handleUpper = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.sendAlert("Converted To Uppercase","primary")
   };
   const handleLower = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.sendAlert("Converted To Lowercase","primary")
   };
   const handleSentenceCase = () => {
     let Newtext = "";
@@ -26,6 +28,7 @@ export default function Textarea(props) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
       })
     );
+    props.sendAlert("Converted To Sentence case","primary")
   };
 
   return (

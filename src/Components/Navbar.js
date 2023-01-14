@@ -12,7 +12,7 @@ export default function Navbar(props) {
         className={`mb-5 navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3 fixed-top`} 
       >
         <div className="container-fluid">
-          <a className="navbar-brand text" href="/">
+          <a className="navbar-brand text" href="#">
             {props.head}
           </a>
           <button
