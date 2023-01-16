@@ -12,7 +12,7 @@ export default function Navbar(props) {
         className={`mb-5 navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3 fixed-top`} 
       >
         <div className="container-fluid">
-          <a className="navbar-brand text" href="#">
+          <a className="navbar-brand text" href="/Textutils-React-1">
             {props.head}
           </a>
           <button
@@ -28,10 +28,10 @@ export default function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="/Textutils-React-1">
                 Home
               </a>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/about">
                 About
               </a>
               <a

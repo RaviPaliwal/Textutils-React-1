@@ -5,6 +5,11 @@ import Showcase from "./Components/Showcase";
 import Textarea from "./Components/Textarea";
 import Alert from "./Components/Alert";
 import About from "./Components/About";
+import {
+  BrowserRouter as Router,
+  Routes,Route
+} from 'react-router-dom';
+
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -36,11 +41,26 @@ function App() {
 
   return (
     <>
-      {/* <About mode= {mode} toggleMode={toggleMode} ></About> */}
       <Navbar head='Text-Utils' mode= {mode} toggleMode={toggleMode} />
       <Alert alert = {alert} />
-      <Textarea initialtext='Your Text Tools' sendAlert= {sendAlert}/>
-      <Showcase linkedinurl="https://www.linkedin.com/in/ravi-paliwal-233312201" Cardname='Ravi Paliwal' Cardtext="I have created such more projects if you want to see then visit my Linkedin Profile"/>
+
+      <Router>
+        <Routes>
+        <Route path="/Textutils-React-1" element={
+        <>
+        <Textarea initialtext='Your Text Tools' sendAlert= {sendAlert}/>
+        <Showcase linkedinurl="https://www.linkedin.com/in/ravi-paliwal-233312201" Cardname='Ravi Paliwal' Cardtext="I have created such more projects if you want to see then visit my Linkedin Profile"/>
+        </>} />
+        <Route path="/about" element={
+          <>
+          <About mode= {mode} toggleMode={toggleMode} />
+          </>
+        } />
+        <Route path="/Textutils-React-1" element={<Textarea initialtext='Your Text Tools' sendAlert= {sendAlert}/>} />
+        </Routes>
+      </Router>
+      
+      
       <Footer mode= {mode} linkedin='https://www.linkedin.com/in/ravi-paliwal-233312201'  github='https://github.com/RaviPaliwal' whatsapp='https://wa.me/+919521885078' facebook='https://www.facebook.com/ravi.paliwal.79827' />
     </>
   );
