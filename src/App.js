@@ -48,12 +48,13 @@ function App() {
         <Routes>
         <Route path="/Textutils-React-1" element={
         <>
-        <Textarea initialtext='Your Text Tools' sendAlert= {sendAlert}/>
+        <Textarea initialtext='Your Text Tools' sendAlert= {sendAlert} />
         <Showcase linkedinurl="https://www.linkedin.com/in/ravi-paliwal-233312201" Cardname='Ravi Paliwal' Cardtext="I have created such more projects if you want to see then visit my Linkedin Profile"/>
+        <Footer mode= {mode} linkedin='https://www.linkedin.com/in/ravi-paliwal-233312201'  github='https://github.com/RaviPaliwal' whatsapp='https://wa.me/+919521885078' facebook='https://www.facebook.com/ravi.paliwal.79827' />
         </>} />
         <Route path="/about" element={
           <>
-          <About mode= {mode} toggleMode={toggleMode} />
+          <About mode= {mode} toggleMode={toggleMode} setMode ={setMode} />
           </>
         } />
         <Route path="/Textutils-React-1" element={<Textarea initialtext='Your Text Tools' sendAlert= {sendAlert}/>} />
@@ -61,7 +62,7 @@ function App() {
       </Router>
       
       
-      <Footer mode= {mode} linkedin='https://www.linkedin.com/in/ravi-paliwal-233312201'  github='https://github.com/RaviPaliwal' whatsapp='https://wa.me/+919521885078' facebook='https://www.facebook.com/ravi.paliwal.79827' />
+      
     </>
   );
 }

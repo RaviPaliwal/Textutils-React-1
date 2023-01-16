@@ -33,12 +33,9 @@ export default function Textarea(props) {
 
   return (
     <>
-      <div className="input input-group-lg wrap-text">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          {props.initialtext}
-        </span>
-        <div className="container group">
-          <div className="mb-3">
+      <div className="input input-group-lg wrap-text mt-5 pt-5">
+        <div className="container group ">
+          <div>
             <textarea
               type="text"
               className="form-control my-3 text-wrap fs-5"

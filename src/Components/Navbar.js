@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Alert from "./Alert";
 
 export default function Navbar(props) {
   const handleonChange = ()=>{
    props.toggleMode(props.mode)
  }
   return (
-    <div className="mb-4 pb-5">
+    <div className="py-4 mt-4">
       <nav
-        className={`mb-5 navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3 fixed-top`} 
+        className={` mb-5 navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} py-3 fixed-top`} 
       >
         <div className="container-fluid">
           <a className="navbar-brand text" href="/Textutils-React-1">

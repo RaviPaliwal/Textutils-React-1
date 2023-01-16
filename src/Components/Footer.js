@@ -4,7 +4,7 @@ export default function Footer(props) {
   return (
       <>
         {/*<!-- Footer --> */}
-        <hr /><hr />
+        <hr />
       <footer className={`bg-${props.mode} text-center text-${props.mode==='light'?'dark':'light'}`}>
           {/* <!-- Grid container --> */}
           <div className="container p-3">
