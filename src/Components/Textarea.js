@@ -33,7 +33,7 @@ export default function Textarea(props) {
 
   return (
     <>
-      <div className="input input-group-lg wrap-text mt-5 pt-5">
+      <div className="input input-group-lg wrap-text">
         <div className="container group ">
           <div>
             <textarea
