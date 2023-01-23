@@ -10,7 +10,6 @@ import {
   Routes,Route
 } from 'react-router-dom';
 
-
 function App() {
   const [mode, setMode] = useState('light');
   const [alert,setalert]=useState(null);
