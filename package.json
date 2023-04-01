@@ -1,5 +1,6 @@
 {
-  "homepage": "https://RaviPaliwal.github.io/Textutils-React-1",
+  //"homepage": "https://RaviPaliwal.github.io/Textutils-React-1",
+  "homepage": "https://textutilsravi.netlify.app/",
   "name": "textutils",
   "version": "0.1.0",
   "private": true,
